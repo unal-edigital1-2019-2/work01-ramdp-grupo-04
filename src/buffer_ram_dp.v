@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    13:34:31 10/22/2019 
-// Design Name: 	 Ferney alberto Beltran Molina
-// Module Name:    buffer_ram_dp 
+// Create Date:    10:22:08 10/22/2019 
+// Design Name: 
+// Module Name:    ram 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,12 +18,14 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module buffer_ram_dp#( 
-	parameter AW = 15, // Cantidad de bits  de la dirección 
+module ram #(
+
+	parameter AW = 17, // Cantidad de bits  de la dirección 
 	parameter DW = 16, // cantidad de Bits de los datos 
-	parameter   imageFILE= "ramdp/image.men")
+	parameter   imagenFILE= "imagen.men")
 	(  
-	input  clk, 
+	input  clk,
+	
 	input  [AW-1: 0] addr_in, 
 	input  [DW-1: 0] data_in,
 	input  regwrite, 
@@ -51,7 +53,7 @@ always @(posedge clk) begin
 end
  
 initial begin
-	$readmemh(imageFILE, ram);
+	$readmemh(imagenFILE, ram);
 end
 
 endmodule

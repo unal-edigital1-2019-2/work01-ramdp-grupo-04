@@ -4,15 +4,15 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   14:41:52 10/22/2019
-// Design Name:   buffer_ram_dp
-// Module Name:   C:/Users/UECCI/Documents/GitHub/SPARTAN6-ATMEGA-MAX5864/lab/P001-ProyectoCamara/src/ramdp/TB_ram.v
-// Project Name:  P001-ProyectoCamara
+// Create Date:   17:32:31 10/26/2019
+// Design Name:   ram
+// Module Name:   /home/david/Escritorio/digital/laboratorio/programas/ram/testbenchram.v
+// Project Name:  ram
 // Target Device:  
 // Tool versions:  
 // Description: 
 //
-// Verilog Test Fixture created by ISE for module: buffer_ram_dp
+// Verilog Test Fixture created by ISE for module: ram
 //
 // Dependencies:
 // 
@@ -22,21 +22,21 @@
 // 
 ////////////////////////////////////////////////////////////////////////////////
 
-module TB_ram;
+module testbenchram;
 
 	// Inputs
 	reg clk;
-	reg [14:0] addr_in;
+	reg [16:0] addr_in;
 	reg [15:0] data_in;
 	reg regwrite;
-	reg [14:0] addr_out;
+	reg [16:0] addr_out;
 	reg regread;
 
 	// Outputs
 	wire [15:0] data_out;
 
 	// Instantiate the Unit Under Test (UUT)
-	buffer_ram_dp uut (
+	ram uut (
 		.clk(clk), 
 		.addr_in(addr_in), 
 		.data_in(data_in), 
@@ -55,11 +55,31 @@ module TB_ram;
 		addr_out = 0;
 		regread = 0;
 
-  // Adicionar las estimulos necesarios para simular la lectura y escritura de la memoria ram
-		# 10 regread=1;
-	   
+		// Wait 100 ns for global reset to finish
+		#100;
+   regread=1;
+	  for (addr_out = 76000; addr_out < 76008; addr_out = addr_out + 1) begin
+			 
+			 #5 $display("el valor de memoria %d =  %d", addr_out,data_out) ;
+
+		  end 
+		regread=0;
+		  #10 
+		  addr_in=0;
+		  data_in=4;
+		  regwrite=1;
+		  
+		  #10 
+		  regwrite=0;
+		  addr_out=0;
+		  regread=1;
+		  #2
+		  $display("el valor de memoria %d =  %d", addr_out,data_out) ;
+
+		  
+		// Add stimulus here
 
 	end
-	always #1 clk = ~clk ;
+    always #1 clk= ~clk; 
 endmodule
 
