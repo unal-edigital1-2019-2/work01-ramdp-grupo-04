@@ -9,7 +9,7 @@
 ## Introducción 
 Para poder almacenar la información adquirida por la cámara ov7670, y teniendo en cuanta la cámara  usada no tiene memoria FIFO, se debe diseñar e implementar una memora RAM  de doble puerto 
 
-![DIAGRAMA](C:\Users\Migue\Documents\GitHub\work01-ramdp-grupo-04\docs\figs\cajaramdp.png)
+![DIAGRAMA](/figs/cajaramdp.png)
 
 En este paquete  de trabajo los estudiantes deben  responder una serie de preguntas para la implementación de una memoria RAM en la FPGA, y evaluar los  resultados a dichas preguntas por medio de  simulación e implementación del repositorio  dado. 
 Para este paquete de trabajo, deben   estar inscrito en un grupo y copiar la información del siguiente link  [WP01](https://classroom.github.com/g/Ra4G34mi) .
