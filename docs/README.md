@@ -20,7 +20,7 @@ Para el desarrollo del proyecto se esta utilizando una Nexys 4 la cual posee com
 ### Pregunta 2:
 ¿Cuál formato  y tamaño de imagen de la cámara OV7670  que se ajusta mejor al tamaño de memoria calculado en la pregunta 1?. Para ello revisar la hoja de datos de la cámara OV7670. Revisar el datasheet que se encuentra [aquí](https://github.com/unal-edigital1-2019-2/work1-ram/blob/master/docs/datasheet/OV7670_2006.pdf)
 
-![FigRGB565](https://github.com/unal-edigital1-2019-2/work01-ramdp-grupo-04/blob/master/docs/figs/RGB565.png)
+![FigRGB565](https://github.com/unal-edigital1-2019-2/work01-ramdp-grupo-04/blob/master/docs/figs/RGB565.PNG)
 
 ### Pregunta 3:
 ¿Cuáles son los registros de configuración de la cámara OV7670 que permiten tener la configuración dada en la pregunta 2? Revisen los registros dados de la página 11 a la 26 del datasheet e indiquen la configuración para:
