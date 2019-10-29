@@ -20,6 +20,8 @@ Analizar la máxima memoria ram que podemos alojar en la FPGA,  y planear el mé
 ### Pregunta 1:
 ¿Definir cuál es el tamaño máximo de buffer de memoria que puede crear?, se recomienda leer las especificaciones de la FPGA que está usando cada grupo. La respuesta se debe dar en bytes.
 
+Para el desarrollo del proyecto se esta utilizando una Nexys 4 la cual posee como maximo una memoria ram de 607.5 KB
+
 ### Pregunta 2:
 ¿Cuál formato  y tamaño de imagen de la cámara OV7670  que se ajusta mejor al tamaño de memoria calculado en la pregunta 1?. Para ello revisar la hoja de datos de la cámara OV7670. Revisar el datasheet que se encuentra [aquí](https://github.com/unal-edigital1-2019-2/work1-ram/blob/master/docs/datasheet/OV7670_2006.pdf)
 
