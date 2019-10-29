@@ -1,11 +1,15 @@
 ##  ELECTRÓNICA DIGITAL 1 2019 -2 UNIVERSIDAD NACIONAL DE COLOMBIA 
 ## TRABAJO 01- EVALUACIÓN DE MEMORIA  MÁXIMA 
 
+## Integrantes
+
+1. Miguel Angel Martinez Fernandez 1024566585
+1. David Ricardo Lugo Venegas 1075872618
 
 ## Introducción 
 Para poder almacenar la información adquirida por la cámara ov7670, y teniendo en cuanta la cámara  usada no tiene memoria FIFO, se debe diseñar e implementar una memora RAM  de doble puerto 
 
-![DIAGRAMA](./figs/cajaramdp.png)
+![DIAGRAMA](C:\Users\Migue\Documents\GitHub\work01-ramdp-grupo-04\docs\figs\cajaramdp.png)
 
 En este paquete  de trabajo los estudiantes deben  responder una serie de preguntas para la implementación de una memoria RAM en la FPGA, y evaluar los  resultados a dichas preguntas por medio de  simulación e implementación del repositorio  dado. 
 Para este paquete de trabajo, deben   estar inscrito en un grupo y copiar la información del siguiente link  [WP01](https://classroom.github.com/g/Ra4G34mi) .
@@ -20,11 +24,12 @@ Analizar la máxima memoria ram que podemos alojar en la FPGA,  y planear el mé
 ### Pregunta 1:
 ¿Definir cuál es el tamaño máximo de buffer de memoria que puede crear?, se recomienda leer las especificaciones de la FPGA que está usando cada grupo. La respuesta se debe dar en bytes.
 
-Para el desarrollo del proyecto se esta utilizando una Nexys 4 la cual posee como maximo una memoria ram de 607.5 KB
+Para el desarrollo del proyecto se esta utilizando una Nexys 4 la cual posee como maximo una memoria RAM de 4860 Kbits o 607.5 KB
 
 ### Pregunta 2:
 ¿Cuál formato  y tamaño de imagen de la cámara OV7670  que se ajusta mejor al tamaño de memoria calculado en la pregunta 1?. Para ello revisar la hoja de datos de la cámara OV7670. Revisar el datasheet que se encuentra [aquí](https://github.com/unal-edigital1-2019-2/work1-ram/blob/master/docs/datasheet/OV7670_2006.pdf)
 
+![DIAGRAMA](./figs/cajaramdp.png)
 ### Pregunta 3:
 ¿Cuáles son los registros de configuración de la cámara OV7670 que permiten tener la configuración dada en la pregunta 2? Revisen los registros dados de la página 11 a la 26 del datasheet e indiquen la configuración para:
 
