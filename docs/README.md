@@ -28,7 +28,34 @@ Dado que la memoria de la Nexys 4 tiene un maximo de 607.5 KB y dejando memoria 
 ### Pregunta 3:
 ¿Cuáles son los registros de configuración de la cámara OV7670 que permiten tener la configuración dada en la pregunta 2? Revisen los registros dados de la página 11 a la 26 del datasheet e indiquen la configuración para:
 
-* Restablecer todos los registros
-* Habilitar el escalado
-* Configurar el formato y el tamaño del pixel
-* Habilitar el test de barra de colores
+1. Restablecer todos los registros
+
+	Para reestablecer todos los registros usaremos el registro COM7[7] (Common control 7) y lo estableceremos en 1.
+
+	![ResetRegisters](https://github.com/unal-edigital1-2019-2/work01-ramdp-grupo-04/blob/master/docs/figs/ResetRegisters.PNG)
+
+1. Habilitar el escalado
+
+	Para habilitar el escalado asignaremos al bit 3 del registro COM3[3] un valor de 1, para hacerlo manual se utiliza el registro COM14[3], pero como en este caso usaremos uno predefinido que es el RGB usaremos el registro COM7[2]= 1 y COM7[0]=0
+
+	![ScaleRegister](https://github.com/unal-edigital1-2019-2/work01-ramdp-grupo-04/blob/master/docs/figs/ScaleRegister.PNG)
+
+	Y ya que utilizaremos una resolucion de 320*240 usaremos el registro COM4[5:4] = 01, para utilizar la mitad de la pantalla:
+
+	![WindowScale](https://github.com/unal-edigital1-2019-2/work01-ramdp-grupo-04/blob/master/docs/figs/WindowScale.PNG)
+
+1. Configurar el formato y el tamaño del pixel
+
+	Ahora para seleccionar el formato RGB usaremos como lo mencionamos anteriormente el registro COM7[2] = 1 y COM7[0] = 0 :
+
+	![OutputRegister](https://github.com/unal-edigital1-2019-2/work01-ramdp-grupo-04/blob/master/docs/figs/OutputRegister.PNG)
+
+	Y mas especificamente para usar el formato RGB 565, usaremos el registro COM15[5:4] = 01
+
+	![PixelRegister](https://github.com/unal-edigital1-2019-2/work01-ramdp-grupo-04/blob/master/docs/figs/PixelRegister.PNG)
+	
+1. Habilitar el test de barra de colores
+
+	Por ultimo para habilitar el test de barra de colores usaremos los 2 registros SCALING_XSC[7] y SCALING_YSC[7] en 1 y 0 respectivamente 
+
+	![ColorBarRegister](https://github.com/unal-edigital1-2019-2/work01-ramdp-grupo-04/blob/master/docs/figs/ColorBarRegister.PNG)
