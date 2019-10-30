@@ -32,7 +32,7 @@ Dado que la memoria de la Nexys 4 tiene un maximo de 607.5 KB y dejando memoria 
 
 	Para reestablecer todos los registros usaremos el registro COM7[7] (Common control 7) y lo estableceremos en 1.
 
-	![ResetRegisters](https://github.com/unal-edigital1-2019-2/work01-ramdp-grupo-04/blob/master/docs/figs/ResetRegisters.PNG)
+	![ResetRegisters](https://github.com/unal-edigital1-2019-2/work01-ramdp-grupo-04/blob/master/docs/figs/ResetRegisters.png)
 
 1. Habilitar el escalado
 
@@ -48,14 +48,14 @@ Dado que la memoria de la Nexys 4 tiene un maximo de 607.5 KB y dejando memoria 
 
 	Ahora para seleccionar el formato RGB usaremos como lo mencionamos anteriormente el registro COM7[2] = 1 y COM7[0] = 0 :
 
-	![OutputRegister](https://github.com/unal-edigital1-2019-2/work01-ramdp-grupo-04/blob/master/docs/figs/OutputRegister.PNG)
+	![OutputRegister](https://github.com/unal-edigital1-2019-2/work01-ramdp-grupo-04/blob/master/docs/figs/OutputRegister.png)
 
 	Y mas especificamente para usar el formato RGB 565, usaremos el registro COM15[5:4] = 01
 
-	![PixelRegister](https://github.com/unal-edigital1-2019-2/work01-ramdp-grupo-04/blob/master/docs/figs/PixelRegister.PNG)
+	![PixelRegister](https://github.com/unal-edigital1-2019-2/work01-ramdp-grupo-04/blob/master/docs/figs/PixelRegister.png)
 	
 1. Habilitar el test de barra de colores
 
 	Por ultimo para habilitar el test de barra de colores usaremos los 2 registros SCALING_XSC[7] y SCALING_YSC[7] en 1 y 0 respectivamente 
 
-	![ColorBarRegister](https://github.com/unal-edigital1-2019-2/work01-ramdp-grupo-04/blob/master/docs/figs/ColorBarRegister.PNG)
+	![ColorBarRegister](https://github.com/unal-edigital1-2019-2/work01-ramdp-grupo-04/blob/master/docs/figs/ColorBarRegister.png)
