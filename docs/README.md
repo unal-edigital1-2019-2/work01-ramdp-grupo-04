@@ -38,7 +38,7 @@ Dado que la memoria de la Nexys 4 tiene un maximo de 607.5 KB y dejando memoria 
 
 	Para habilitar el escalado asignaremos al bit 3 del registro COM3[3] un valor de 1, para hacerlo manual se utiliza el registro COM14[3], pero como en este caso usaremos uno predefinido que es el RGB usaremos el registro COM7[2]= 1 y COM7[0]=0
 
-	![ScaleRegister](https://github.com/unal-edigital1-2019-2/work01-ramdp-grupo-04/blob/master/docs/figs/ScaleRegister.PNG)
+	![ScaleRegister](https://github.com/unal-edigital1-2019-2/work01-ramdp-grupo-04/blob/master/docs/figs/ScaleRegister.png)
 
 	Y ya que utilizaremos una resolucion de 320*240 usaremos el registro COM4[5:4] = 01, para utilizar la mitad de la pantalla:
 
